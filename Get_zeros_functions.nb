@@ -10,15 +10,108 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     90258,       2103]
-NotebookOptionsPosition[     89743,       2085]
-NotebookOutlinePosition[     90085,       2100]
-CellTagsIndexPosition[     90042,       2097]
+NotebookDataLength[    103915,       2527]
+NotebookOptionsPosition[    103400,       2509]
+NotebookOutlinePosition[    103742,       2524]
+CellTagsIndexPosition[    103699,       2521]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"GetZeros", "::", "usage"}], " ", "=", " ", "\[IndentingNewLine]", 
+   "\"\<Finds complex zeros of \!\(\*
+StyleBox[\"f\",
+FontWeight->\"Plain\"]\) \n\!\(\*
+StyleBox[\"f\",
+FontWeight->\"Plain\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"is\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"a\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"symbolic\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"function\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"of\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"interest\",
+FontWeight->\"Bold\"]\)\n\!\(\*
+StyleBox[\"vars\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\) is a list of variables names that belong to zero, \
+e.g. {x, m}, simbolic\n\!\(\*
+StyleBox[\"ranges\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\) is (2,2) array specifies searching area for each \
+variable in \!\(\*
+StyleBox[\"vars\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\",\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"e\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\".\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"g\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\".\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Plain\"]\)\!\(\*
+StyleBox[\"{\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"{\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"x1\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\",\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"x2\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"}\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\",\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"{\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"y1\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\",\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"y2\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"}\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"}\",
+FontWeight->\"Bold\"]\)\n\!\(\*
+StyleBox[\"n\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\) is sampling number for first variable\n\!\(\*
+StyleBox[\"m\",
+FontSlant->\"Italic\"]\) is sampling number for second variable (if isn't \
+specified = \!\(\*
+StyleBox[\"n\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\))\nReturns: list of zeros, shape is (numb of zeros, 2 \
+coordinates)\>\""}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"GetZeros", "[", 
@@ -151,7 +244,210 @@ Cell[BoxData[{
       "\[IndentingNewLine]", 
       RowBox[{"GatePoints", "[", 
        RowBox[{"out", ",", "ranges"}], "]"}]}]}], "\[IndentingNewLine]", 
-    "]"}]}], "\n"}], "\[IndentingNewLine]", 
+    "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"GatePoints", "::", "usage"}], " ", "=", " ", 
+   "\[IndentingNewLine]", "\"\<Drops out points not related to \!\(\*
+StyleBox[\"area\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"\\\\n\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"list\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)is list of zeros, shape is (numb of zeros, 2 \
+coordinates)\n\!\(\*
+StyleBox[\"area\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\) is (2,2) array\!\(\*
+StyleBox[\",\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"e\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\".\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"g\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\".\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Plain\"]\)\!\(\*
+StyleBox[\"{\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"{\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"x1\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\",\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"x2\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"}\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\",\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"{\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"y1\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\",\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"y2\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"}\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"}\",
+FontWeight->\"Bold\"]\)\nReturns: list of evolved zeros, shape is (numb of \
+zeros, evolition dimension, 2 coordinates 1 parameter)\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"GatePoints", "[", 
+    RowBox[{"list_", ",", "area_"}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "gate1", ",", "gate2", ",", "gate3", ",", "gate4", ",", "range1", ",", 
+       "range2"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"range1", ",", "range2"}], "}"}], "=", "area"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"gate1", ",", "gate2"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"gate3", ",", "gate4"}], "}"}]}], "}"}], "=", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}]}], 
+        "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Length", "[", "range1", "]"}], ">", "1"}], ",", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"gate1", ",", "gate2"}], "}"}], "=", "range1"}]}], "]"}], 
+      ";", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Length", "[", "range2", "]"}], ">", "1"}], ",", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"gate3", ",", "gate4"}], "}"}], "=", "range2"}]}], "]"}], 
+      ";", "\[IndentingNewLine]", 
+      RowBox[{"DeleteCases", "[", 
+       RowBox[{"list", ",", 
+        RowBox[{"x_", "/;", 
+         RowBox[{"!", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"gate1", "\[LessEqual]", "  ", 
+              RowBox[{
+              "x", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+              "\[LessEqual]", " ", "gate2"}], ")"}], "&&", 
+            RowBox[{"(", 
+             RowBox[{"gate3", "\[LessEqual]", "  ", 
+              RowBox[{
+              "x", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+              "\[LessEqual]", " ", "gate4"}], ")"}]}], ")"}]}]}]}], "]"}]}]}],
+     "\[IndentingNewLine]", "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"GetZeroEvolution", "::", "usage"}], " ", "=", " ", 
+   "\[IndentingNewLine]", "\"\<Develops a one complex zero of \!\(\*
+StyleBox[\"f\",
+FontWeight->\"Plain\"]\) \n\!\(\*
+StyleBox[\"f\",
+FontWeight->\"Plain\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"is\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"a\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"symbolic\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"function\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"of\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"interest\",
+FontWeight->\"Bold\"]\)\n\!\(\*
+StyleBox[\"vars\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\) is a list of variables names that belong to zero, \
+e.g. {x, m}, simbolic\n\!\(\*
+StyleBox[\"root0\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\) is list of zero coordinates\n\!\(\*
+StyleBox[\"evolution\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\) is a list which comprises {symbolic evolution \
+parameter, start value, end value, sampling step}\n\!\(\*
+StyleBox[\"preEvoList\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\) is a values list of symbolic evolution parameter (if \
+specified, \!\(\*
+StyleBox[\"evolution\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"\[LeftDoubleBracket]\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"2\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\";;\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"3\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"\[RightDoubleBracket]\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"is\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"ignored\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\")\",
+FontWeight->\"Bold\"]\)\nReturns: list of evolved zero, shape is (evolition \
+dimension, 2 coordinates 1 parameter)\>\""}], ";"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"GetZeroEvolution", "[", 
@@ -240,100 +536,195 @@ Cell[BoxData[{
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"GatePoints", "[", 
-    RowBox[{"list_", ",", "area_"}], "]"}], ":=", 
+   RowBox[{"MultipleEvolution", "::", "usage"}], " ", "=", " ", 
+   "\[IndentingNewLine]", "\"\<Develops list of complex zeros of \!\(\*
+StyleBox[\"f\",
+FontWeight->\"Plain\"]\) \n\!\(\*
+StyleBox[\"f\",
+FontWeight->\"Plain\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"is\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"a\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"symbolic\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"function\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"of\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"interest\",
+FontWeight->\"Bold\"]\)\n\!\(\*
+StyleBox[\"vars\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\) is a list of variables names that belong to zero, \
+e.g. {x, m}, simbolic\n\!\(\*
+StyleBox[\"rootslist\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\) is a list of zero coordinates\n\!\(\*
+StyleBox[\"evolution\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\) is a list which comprises {symbolic evolution \
+parameter, start value, end value, sampling step}\n\!\(\*
+StyleBox[\"evoList\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\) is a values list of symbolic evolution parameter (if \
+specified, \!\(\*
+StyleBox[\"evolution\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"\[LeftDoubleBracket]\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"2\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\";;\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"3\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"\[RightDoubleBracket]\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"is\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"ignored\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\")\",
+FontWeight->\"Bold\"]\)\nReturns: trajectories of zeros, shape is (numb of \
+zeros, evolition dimension, 2 coordinates 1 parameter)\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"MultipleEvolution", "[", 
+    RowBox[{"f_", ",", "vars_", ",", "rootslist_", ",", "evolution_", ",", 
+     RowBox[{"evoList_:", 
+      RowBox[{"{", "}"}]}]}], "]"}], ":=", 
    RowBox[{"Module", "[", 
     RowBox[{
      RowBox[{"{", 
       RowBox[{
-      "gate1", ",", "gate2", ",", "gate3", ",", "gate4", ",", "range1", ",", 
-       "range2"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"evoLines", "=", 
+        RowBox[{"{", "}"}]}], ",", "i", ",", "evoPoints", ",", "evoLine"}], 
+      "}"}], ",", "\[IndentingNewLine]", 
      RowBox[{
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"range1", ",", "range2"}], "}"}], "=", "area"}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"gate1", ",", "gate2"}], "}"}], ",", 
-         RowBox[{"{", 
-          RowBox[{"gate3", ",", "gate4"}], "}"}]}], "}"}], "=", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}], ",", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}]}], 
-        "}"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"If", "[", 
+      RowBox[{"For", "[", 
        RowBox[{
+        RowBox[{"i", "=", "1"}], ",", 
+        RowBox[{"i", "<=", 
+         RowBox[{"Length", "[", "rootslist", "]"}]}], ",", 
+        RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
         RowBox[{
-         RowBox[{"Length", "[", "range1", "]"}], ">", "1"}], ",", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"gate1", ",", "gate2"}], "}"}], "=", "range1"}]}], "]"}], 
-      ";", "\[IndentingNewLine]", 
-      RowBox[{"If", "[", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"Length", "[", "range2", "]"}], ">", "1"}], ",", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"gate3", ",", "gate4"}], "}"}], "=", "range2"}]}], "]"}], 
-      ";", "\[IndentingNewLine]", 
-      RowBox[{"DeleteCases", "[", 
-       RowBox[{"list", ",", 
-        RowBox[{"x_", "/;", 
-         RowBox[{"!", 
-          RowBox[{"(", 
-           RowBox[{
-            RowBox[{"(", 
-             RowBox[{"gate1", "\[LessEqual]", "  ", 
-              RowBox[{
-              "x", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-              "\[LessEqual]", " ", "gate2"}], ")"}], "&&", 
-            RowBox[{"(", 
-             RowBox[{"gate3", "\[LessEqual]", "  ", 
-              RowBox[{
-              "x", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
-              "\[LessEqual]", " ", "gate4"}], ")"}]}], ")"}]}]}]}], "]"}]}]}],
-     "\[IndentingNewLine]", "]"}]}], 
+         RowBox[{"evoPoints", "=", 
+          RowBox[{"GetZeroEvolution", "[", 
+           RowBox[{"f", ",", "vars", ",", 
+            RowBox[{"rootslist", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], ",", "evolution", ",", 
+            "evoList"}], "]"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"evoLines", "=", 
+          RowBox[{"Append", "[", 
+           RowBox[{"evoLines", ",", "evoPoints"}], "]"}]}], ";"}]}], 
+       "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+      "evoLines"}]}], "\[IndentingNewLine]", "]"}]}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"MultipleEvolution", "[", 
-   RowBox[{"f_", ",", "vars_", ",", "rootslist_", ",", "evolution_", ",", 
-    RowBox[{"evoList_:", 
-     RowBox[{"{", "}"}]}]}], "]"}], ":=", 
-  RowBox[{"Module", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{
-      RowBox[{"evoLines", "=", 
-       RowBox[{"{", "}"}]}], ",", "i", ",", "evoPoints", ",", "evoLine"}], 
-     "}"}], ",", "\[IndentingNewLine]", 
-    RowBox[{
-     RowBox[{"For", "[", 
-      RowBox[{
-       RowBox[{"i", "=", "1"}], ",", 
-       RowBox[{"i", "<=", 
-        RowBox[{"Length", "[", "rootslist", "]"}]}], ",", 
-       RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"evoPoints", "=", 
-         RowBox[{"GetZeroEvolution", "[", 
-          RowBox[{"f", ",", "vars", ",", 
-           RowBox[{"rootslist", "[", 
-            RowBox[{"[", "i", "]"}], "]"}], ",", "evolution", ",", 
-           "evoList"}], "]"}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"evoLines", "=", 
-         RowBox[{"Append", "[", 
-          RowBox[{"evoLines", ",", "evoPoints"}], "]"}]}], ";"}]}], 
-      "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
-     "evoLines"}]}], "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MultipleEvolution2D", "::", "usage"}], " ", "=", " ", 
+   "\[IndentingNewLine]", "\"\<Develops trajectories of complex zeros of \!\(\*
+StyleBox[\"f\",
+FontWeight->\"Plain\"]\) (adding extra dimension to trajectories of zeros)\n\
+\!\(\*
+StyleBox[\"f\",
+FontWeight->\"Plain\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"is\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"a\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"symbolic\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"function\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"of\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"interest\",
+FontWeight->\"Bold\"]\)\n\!\(\*
+StyleBox[\"vars\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\) is a list of variables names that belong to zero, \
+e.g. {x, m}, simbolic\nevolist is a list of zero trajectories, shape is (numb \
+of zeros, evolition dimension, 2 coordinates 1 parameter)\n\!\(\*
+StyleBox[\"rootslist\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\) is a list of zero coordinates\n\!\(\*
+StyleBox[\"evolution\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\) is a list which comprises {symbolic evolution \
+parameter, start value, end value, sampling step}\n\!\(\*
+StyleBox[\"evoList\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\) is a values list of symbolic evolution parameter (if \
+specified, \!\(\*
+StyleBox[\"evolution\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"\[LeftDoubleBracket]\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"2\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\";;\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"3\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"\[RightDoubleBracket]\",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Plain\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"is\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\" \",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\"ignored\",
+FontWeight->\"Bold\"]\)\!\(\*
+StyleBox[\")\",
+FontWeight->\"Bold\"]\)\nReturns: trajectories of zeros, shape is (numb of \
+zeros, evolition dimension, 2 coordinates 1 parameter)\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"MultipleEvolution2D", "[", 
@@ -1402,7 +1793,7 @@ Cell[BoxData[{
          RowBox[{"k", ",", "1", ",", "mv", ",", "1"}], "}"}], ",", 
         RowBox[{"{", 
          RowBox[{"k2", ",", "1", ",", "mv2", ",", "1"}], "}"}]}], "]"}]}]}], 
-    "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]"}], "\n", 
+    "\[IndentingNewLine]", "]"}]}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"PlotTrajToGIF", "[", 
@@ -1443,7 +1834,7 @@ Cell[BoxData[{
         ",", 
         RowBox[{"{", 
          RowBox[{"ind", ",", "1", ",", "mv", ",", "2"}], "}"}]}], "]"}]}]}], 
-    "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]"}], "\n", 
+    "\[IndentingNewLine]", "]"}]}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"PlotTrajToGIFind", "[", 
    RowBox[{
@@ -1870,7 +2261,40 @@ Cell[BoxData[{
    3.8084504468029003`*^9, 3.808450446956489*^9}, {3.8084509937433043`*^9, 
    3.8084510097664537`*^9}, {3.8084511382013984`*^9, 
    3.8084511911746845`*^9}, {3.808451270887084*^9, 3.808451282147944*^9}, 
-   3.808451972611538*^9},ExpressionUUID->"354908a4-d361-401d-a584-\
+   3.808451972611538*^9, {3.878347682120164*^9, 3.878347691181941*^9}, {
+   3.878347903289915*^9, 3.8783479574721694`*^9}, {3.8783481138411884`*^9, 
+   3.8783481308495493`*^9}, {3.8783498966374054`*^9, 
+   3.8783499334865465`*^9}, {3.8783499821362953`*^9, 3.878350265744035*^9}, {
+   3.878350348529065*^9, 3.8783504058800087`*^9}, {3.8783504843567133`*^9, 
+   3.878350502681574*^9}, {3.878350954024391*^9, 3.8783509575765486`*^9}, {
+   3.8783509924594913`*^9, 3.8783510896207623`*^9}, 3.878351129377921*^9, {
+   3.878351365173338*^9, 3.8783513783036985`*^9}, {3.879201583538844*^9, 
+   3.8792015899168167`*^9}, {3.879202251757841*^9, 3.879202254568079*^9}, {
+   3.8792023100814657`*^9, 3.879202311919391*^9}, {3.8792026426682825`*^9, 
+   3.8792027434977007`*^9}, {3.8792035340568113`*^9, 3.87920353855649*^9}, {
+   3.879203580615342*^9, 3.879203583352682*^9}, {3.8792037124405546`*^9, 
+   3.8792037151936316`*^9}, {3.879204135729788*^9, 3.879204170668296*^9}, {
+   3.8792042360547676`*^9, 3.879204245024522*^9}, {3.8792051653452344`*^9, 
+   3.8792051685569983`*^9}, {3.8792052154285183`*^9, 3.879205239312169*^9}, {
+   3.8792053321312017`*^9, 3.8792053445105*^9}, {3.879205583741679*^9, 
+   3.879205594449534*^9}, {3.8792056390487766`*^9, 3.8792056843315516`*^9}, {
+   3.8792058123981786`*^9, 3.8792058126527567`*^9}, 3.8792059298378534`*^9, {
+   3.8792059783743935`*^9, 3.879205992505168*^9}, {3.8792060316066403`*^9, 
+   3.8792060396428766`*^9}, {3.879206610007397*^9, 3.879206710011794*^9}, {
+   3.8792068018169327`*^9, 3.879206858414153*^9}, {3.879206971182233*^9, 
+   3.8792070085554028`*^9}, {3.8792070634589877`*^9, 
+   3.8792070947361193`*^9}, {3.879207459572569*^9, 3.879207464294653*^9}, {
+   3.8792080281502514`*^9, 3.879208062407812*^9}, {3.8792081214978333`*^9, 
+   3.8792081531090746`*^9}, {3.879208208239175*^9, 3.879208239533933*^9}, {
+   3.879208285894933*^9, 3.879208291689145*^9}, {3.879208330375995*^9, 
+   3.879208383079692*^9}, {3.879209479520162*^9, 3.8792095372758417`*^9}, {
+   3.879209730742959*^9, 3.8792097359598217`*^9}, {3.8792098162966356`*^9, 
+   3.879209832556822*^9}, {3.879209871937941*^9, 3.879209988562682*^9}, {
+   3.8792101150167785`*^9, 3.879210186702285*^9}, 3.8792102790539756`*^9, {
+   3.879213349711316*^9, 3.879213376853036*^9}, {3.8792135996403956`*^9, 
+   3.8792136180480013`*^9}, {3.8792136575258265`*^9, 3.87921369725778*^9}, {
+   3.8792137620046687`*^9, 3.8792138307796607`*^9}, {3.8792138715837507`*^9, 
+   3.879213950931266*^9}},ExpressionUUID->"354908a4-d361-401d-a584-\
 593a3f90aa62"],
 
 Cell[BoxData[{
@@ -2084,7 +2508,7 @@ Cell[BoxData[{
 29308d74e8f5"]
 },
 WindowSize->{958, 966},
-WindowMargins->{{Automatic, -8}, {Automatic, 0}},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
 FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
 StyleDefinitions->"Default.nb"
 ]
@@ -2099,11 +2523,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 80129, 1853, 5042, "Input", "ExpressionUUID" -> \
+Cell[558, 20, 93786, 2277, 5750, "Input", "ExpressionUUID" -> \
 "354908a4-d361-401d-a584-593a3f90aa62"],
-Cell[80690, 1875, 791, 20, 50, "Input", "ExpressionUUID" -> \
+Cell[94347, 2299, 791, 20, 50, "Input", "ExpressionUUID" -> \
 "bd11ac19-7fd2-41d3-a81e-d8eb0c3729c6"],
-Cell[81484, 1897, 8255, 186, 734, "Input", "ExpressionUUID" -> \
+Cell[95141, 2321, 8255, 186, 734, "Input", "ExpressionUUID" -> \
 "ae92a364-66a3-4717-8ccb-29308d74e8f5"]
 }
 ]
